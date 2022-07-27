@@ -1,0 +1,18 @@
+<div class="container">
+    <p>Hello {{name}} </p>
+    <img [src]="imageUrl" alt="formalab logo" width="150px">
+    <button (click)="hello(name)" class="btn btn-info">click</button>
+    <br>
+    <ul *ngFor="let bookname of bocksList">
+        <li>{{bookname}}</li>
+    </ul>
+    <!--<div *ngIf="myCondition"> simple text</div> -->
+    <div *ngIf="bocksList.length == 0" class="alert alert-warning">
+        no books found
+    </div>
+    <hr>
+    <ul *ngFor="let user of usersList">
+        <li>{{user.firstname}}</li>
+    </ul>
+
+</div>
